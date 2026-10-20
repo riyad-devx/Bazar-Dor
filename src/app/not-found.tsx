@@ -1,14 +1,10 @@
-
 import Link from "next/link";
 
 const NotFound = () => {
   return (
     <div className="relative flex  flex-col items-center justify-center overflow-hidden px-4 text-center">
-
-      {/* Background Design */}
       <div className="absolute left-1/2 top-1/2 -z-0 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-50 blur-3xl"></div>
 
-      {/* 404 Number */}
       <div className="relative">
         <h1 className="text-[120px] font-black leading-none tracking-tighter text-red-600 drop-shadow-sm md:text-[180px]">
           404
@@ -19,7 +15,6 @@ const NotFound = () => {
         </span>
       </div>
 
-      {/* Content */}
       <div className="relative mt-5">
         <div className="mb-4 text-5xl">🔍</div>
 
@@ -33,7 +28,6 @@ const NotFound = () => {
           The page you are looking for doesn't exist or has been moved.
         </p>
 
-        {/* Back Home Button */}
         <Link
           href="/"
           className="mt-8 inline-flex items-center gap-2 rounded-xl bg-red-600 px-7 py-3.5 font-semibold text-white shadow-lg shadow-red-200 transition duration-300 hover:-translate-y-1 hover:bg-red-700 hover:shadow-xl"
