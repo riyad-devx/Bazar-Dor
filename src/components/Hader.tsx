@@ -14,7 +14,7 @@ const Hader = async () => {
     <header className="fixed top-0 left-0 z-50 w-full">
       <div className="w-full bg-white">
         <div className="relative mx-auto flex max-w-7xl items-center justify-between bg-white px-4 py-4">
-          {/* Logo and Website Name */}
+          
           <div className="flex flex-col items-center justify-center gap-1 sm:flex-row sm:gap-2">
             <Image
               src="/logo-icon.png"
@@ -32,7 +32,6 @@ const Hader = async () => {
             </div>
           </div>
 
-          {/* Sign In, Sign Up and Bazar Jat */}
           <div className="flex items-center gap-2 sm:gap-4">
             <UserInfo />
           </div>
