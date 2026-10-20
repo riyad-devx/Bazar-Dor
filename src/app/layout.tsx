@@ -5,6 +5,11 @@ import { Suspense } from "react";
 import Hader from "@/components/Hader";
 import Marquee from "@/components/Marquee";
 import Footer from "@/components/Fotter";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
+
 
 const NotoSerifBengali = Noto_Serif_Bengali({
   subsets: ["latin", "bengali"],
@@ -27,7 +32,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Hader />
           <Marquee/>
         </Suspense>
-        <main className="mt-24 w-full mx-auto">{children}</main>
+        <main className="mt-24 w-full mx-auto">
+          <ToastContainer/>
+          {children}
+          </main>
+      
         <Footer/>
       </body>
     </html>
