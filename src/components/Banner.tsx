@@ -9,7 +9,7 @@ const Banner = () => {
   return (
     <div className="px-5 py-4">
       <div className="mx-auto flex min-h-48 w-full max-w-5xl items-center justify-between gap-4 rounded-2xl border border-green-100 bg-white p-4 sm:gap-6 sm:p-5">
-        {/* Left Content */}
+        
         <div className="min-w-0 flex-1">
           <span className="mb-2 inline-block rounded-full bg-green-100 px-2 py-1 text-[10px] text-green-700">
             {date}
@@ -32,7 +32,6 @@ const Banner = () => {
           </a>
         </div>
 
-        {/* Right Image */}
         <div className="flex w-20 shrink-0 items-center justify-center sm:w-40">
           <Image
             src="/bazar-hero.png"
