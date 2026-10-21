@@ -2,7 +2,13 @@ import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "@better-auth/mongo-adapter";
 
-const client = new MongoClient(process.env.MONGODB_URL as string);
+const mongodbUrl = process.env.MONGODB_URL;
+
+if (!mongodbUrl) {
+  throw new Error("MONGODB_URL environment variable is missing");
+}
+
+const client = new MongoClient(mongodbUrl);
 const db = client.db("bazar_dor");
 
 export const auth = betterAuth({
@@ -19,10 +25,10 @@ export const auth = betterAuth({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
     },
+
     github: {
       clientId: process.env.GITHUB_CLIENT_ID as string,
       clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
     },
   },
-
 });
