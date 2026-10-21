@@ -4,10 +4,13 @@ import Link from "next/link";
 type Product = {
   id: number;
   slug: string;
+  category: string;
+  categoryNameBn: string;
+  categoryIcon: string;
   nameBn: string;
+  image: string;
   today: number;
   unit: string;
-  image: string;
   change: {
     dir: "up" | "down" | "flat";
     pct: number;

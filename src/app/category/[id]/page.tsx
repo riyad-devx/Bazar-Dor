@@ -1,4 +1,5 @@
 import ProductCard from "@/components/ProdractCard";
+import { Product } from "@/type";
 import Link from "next/link";
 import { Suspense } from "react";
 
@@ -6,15 +7,6 @@ type Props = {
   params: Promise<{ id: string }>;
 };
 
-type Product = {
-  id: number;
-  category: string;
-  categoryNameBn: string;
-  categoryIcon: string;
-  nameBn: string;
-  image: string;
-  today: number;
-};
 
 const CategoryProducts = async ({ id }: { id: string }) => {
   const res = await fetch(

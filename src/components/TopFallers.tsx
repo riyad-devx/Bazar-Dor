@@ -1,17 +1,6 @@
+import { Product } from "@/type";
 import ProductCard from "./ProdractCard";
 
-type Product = {
-  id: number;
-  slug: string;
-  nameBn: string;
-  today: number;
-  unit: string;
-  image: string;
-  change: {
-    dir: "up" | "down" | "flat";
-    pct: number;
-  };
-};
 
 const TopFallers = async () => {
   const res = await fetch(

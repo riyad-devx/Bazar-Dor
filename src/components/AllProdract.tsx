@@ -1,18 +1,8 @@
 import React from "react";
 import ProductCard from "./ProdractCard";
+import { Product } from "@/type";
 
-type Product = {
-  id: number;
-  slug: string;
-  nameBn: string;
-  today: number;
-  unit: string;
-  image: string;
-  change: {
-    dir: "up" | "down" | "flat";
-    pct: number;
-  };
-};
+
 
 const AllProdract = async () => {
   const res = await fetch(
