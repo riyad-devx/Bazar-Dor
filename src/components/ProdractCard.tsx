@@ -1,21 +1,7 @@
 
+import { Product } from "@/type";
 import Link from "next/link";
 
-type Product = {
-  id: number;
-  slug: string;
-  category: string;
-  categoryNameBn: string;
-  categoryIcon: string;
-  nameBn: string;
-  image: string;
-  today: number;
-  unit: string;
-  change: {
-    dir: "up" | "down" | "flat";
-    pct: number;
-  };
-};
 
 const ProductCard = ({ product }: { product: Product }) => {
   const units: Record<string, string> = {
