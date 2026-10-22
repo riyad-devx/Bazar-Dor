@@ -1,11 +1,13 @@
 "use client";
 
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth-client";;
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { toast } from "react-toastify";
 
 const SignInPage = () => {
+  const router = useRouter();
   const onSubmit = async (
     e: React.FormEvent<HTMLFormElement>,
   ): Promise<void> => {
