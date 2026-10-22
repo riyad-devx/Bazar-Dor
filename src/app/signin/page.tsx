@@ -30,7 +30,7 @@ const SignInPage = () => {
 
     if (data) {
       toast.success("সাইন ইন সফল হয়েছে! 🎉");
-      window.location.href = "/";
+      router.push("/");
     }
   };
 
